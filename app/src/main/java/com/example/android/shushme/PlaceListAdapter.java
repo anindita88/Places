@@ -35,10 +35,6 @@ public class PlaceListAdapter extends RecyclerView.Adapter<PlaceListAdapter.Plac
      *
      * @param context the calling context/activity
      */
-    public PlaceListAdapter(Context context, PlaceBuffer places) {
-        this.mContext = context;
-        this.mPlaces = places;
-    }
 
     /**
      * Called when RecyclerView needs a new ViewHolder of the given type to represent an item
