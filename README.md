@@ -1,7 +1,7 @@
 # Places
 
 ## Link File APK : 
-https://drive.google.com/open?id=1gAemWMIHONWWRdJb8CTSJOhFEWtJymVo
+https://drive.google.com/open?id=1xAGGjNmnIyeMbhJtJElgPpb_pg698hDb
 
 ## Identitas Siswa :
         
