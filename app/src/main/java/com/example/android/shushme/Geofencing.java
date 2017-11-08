@@ -61,7 +61,23 @@ public class Geofencing implements ResultCallback {
      * when the Geofence is triggered
      * Triggers {@link #onResult} when the geofences have been registered successfully
      */
-   
+    public void registerAllGeofences() {
+        // Check that the API client is connected and that the list has Geofences in it
+        if (mGoogleApiClient == null || !mGoogleApiClient.isConnected() ||
+                mGeofenceList == null || mGeofenceList.size() == 0) {
+            return;
+        }
+        try {
+            LocationServices.GeofencingApi.addGeofences(
+                    mGoogleApiClient,
+                    getGeofencingRequest(),
+                    getGeofencePendingIntent()
+            ).setResultCallback(this);
+        } catch (SecurityException securityException) {
+            // Catch exception generated if the app does not use ACCESS_FINE_LOCATION permission.
+            Log.e(TAG, securityException.getMessage());
+        }
+    }
 
     /***
      * Unregisters all the Geofences created by this app from Google Place Services
